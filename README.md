@@ -1,117 +1,125 @@
-# Amigo Secreto 🎁
+Amigo Secreto 🎁
 
-> Aplicación simple web para agregar nombres de amigos y realizar un sorteo aleatorio para elegir quién será el “amigo secreto”.
+Aplicación web sencilla para organizar un sorteo de “amigo secreto” ingresando nombres y seleccionando uno al azar.
 
----
+🧾 Tabla de contenido
 
-## 🧾 Tabla de contenido
+Descripción
 
-1. [Descripción](#descripción)  
-2. [Funcionalidades](#funcionalidades)  
-3. [Cómo usarla / Demo](#cómo-usarla--demo)  
-4. [Tecnologías utilizadas](#tecnologías-utilizadas)  
-5. [Estructura del proyecto](#estructura-del-proyecto)  
-6. [Desarrollo](#desarrollo)  
-7. [Contribuyentes](#contribuyentes)  
-8. [Licencia](#licencia)  
+Funcionalidades
 
----
+Cómo usarla / Demo
 
-## 📄 Descripción
+Tecnologías utilizadas
 
-Esta aplicación permite que uno o varios usuarios ingresen nombres de amigos, los visualicen en una lista, y luego realicen un sorteo aleatorio para determinar quién será seleccionado como amigo secreto. Incluye validaciones básicas para mejorar la experiencia de usuario.
+Estructura del proyecto
 
-El objetivo principal es practicar conceptos fundamentales de programación: arreglos (arrays), condicionales, manejo del DOM, eventos, y lógica de selección aleatoria.  
+Desarrollo
 
----
+Contribuyentes
 
-## ✅ Funcionalidades
+Licencia
 
-- Agregar nombres mediante un campo de texto + botón **“Adicionar”**.  
-- Validar entrada: no se permite agregar nombre vacío; se muestra alerta si sucede.  
-- Visualizar lista de nombres agregados en pantalla.  
-- Botón **“Sortear Amigo”** que selecciona aleatoriamente uno de los nombres de la lista y lo muestra como resultado.  
+📄 Descripción
 
----
+Esta aplicación está diseñada para facilitar la organización de un “amigo secreto” de manera simple y rápida. Los usuarios pueden agregar los nombres de los participantes, visualizarlos en una lista y, finalmente, realizar un sorteo que elige aleatoriamente a un “amigo secreto”.
 
-## 🚀 Cómo usarla / Demo
+El propósito principal de este proyecto es practicar y aplicar conceptos fundamentales de programación con JavaScript, incluyendo el manejo de arrays, eventos, manipulación del DOM y validaciones básicas para mejorar la experiencia del usuario.
 
-1. Clonar el repositorio:
+✅ Funcionalidades
 
-   ```bash
-   git clone https://github.com/tuUsuario/amigo-secreto.git
+Agregar nombres: Permite ingresar un nombre en un campo de texto y añadirlo a la lista de participantes mediante un botón.
+
+Validaciones: No se permite ingresar nombres vacíos; si el campo está vacío se muestra una alerta para evitar entradas inválidas.
+
+Visualización dinámica: Los nombres agregados se muestran en una lista en la página, actualizándose en tiempo real.
+
+Sorteo aleatorio: Al presionar el botón “Sortear Amigo”, se selecciona aleatoriamente un nombre de la lista y se muestra como resultado del sorteo.
+
+🚀 Cómo usarla / Demo
+
+Para probar esta aplicación localmente, sigue estos pasos:
+
+Clona el repositorio en tu máquina local:
+
+git clone https://github.com/AristidesAlonso/sorteo-amigo-secreto.git
 
 
-Abrir el archivo index.html en tu navegador web.
+Abre la carpeta del proyecto:
 
-En la interfaz:
+cd sorteo-amigo-secreto
 
-Escribir un nombre en el campo de texto.
 
-Hacer clic en Adicionar → el nombre aparece en la lista.
+Abre el archivo index.html en tu navegador web preferido (puedes simplemente hacer doble clic en el archivo o usar un servidor local si prefieres).
 
-Si no escribes nada y haces clic en Adicionar, aparece una alerta indicando que ingreses un nombre válido.
+En la página:
 
-Cuando ya haya varios nombres en la lista, hacer clic en Sortear Amigo → se muestra en pantalla el nombre elegido al azar.
+Escribe un nombre en el campo de texto.
 
-(Opcional) Puedes modificar los estilos CSS o la estructura HTML para mejorar la interfaz.
+Haz clic en Adicionar para agregar el nombre a la lista.
+
+Si el campo está vacío y presionas Adicionar, recibirás una alerta para ingresar un nombre válido.
+
+Una vez tengas varios nombres en la lista, haz clic en Sortear Amigo para elegir un amigo secreto al azar.
+
+(Opcional) Puedes modificar los estilos CSS o la estructura HTML para personalizar la apariencia.
 
 🛠 Tecnologías utilizadas
 
-HTML5
+Este proyecto está construido con tecnologías web básicas, ideales para principiantes y para entender cómo funciona la manipulación del DOM y eventos:
 
-CSS3
+HTML5: Estructura de la página web.
 
-JavaScript (vanilla)
+CSS3: Estilos y diseño visual para una experiencia agradable.
 
-Git para control de versiones
+JavaScript (Vanilla): Lógica del programa, manejo de eventos y manipulación dinámica del contenido.
+
+Git: Control de versiones para gestionar el proyecto.
 
 📂 Estructura del proyecto
+
+La estructura del proyecto es sencilla y fácil de entender:
+
 amigo-secreto/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
-
-
-index.html: estructura de la página.
-
-styles.css: estilos visuales.
-
-script.js: lógica de manipulación del DOM, validaciones, sorteo aleatorio.
+├── index.html       # Archivo principal que contiene la estructura HTML.
+├── styles.css       # Estilos CSS para la presentación visual.
+├── script.js        # Código JavaScript que controla la lógica y comportamiento.
+└── README.md        # Documento de descripción del proyecto (este archivo).
 
 🧑‍💻 Desarrollo
 
-Aquí una explicación breve de la lógica central:
+La lógica central de la aplicación está implementada en JavaScript y se basa en la manipulación de un array que almacena los nombres ingresados:
 
-Mantener un array nombres = [] que almacena los nombres que ingresa el usuario.
+Se declara un array vacío llamado nombres que irá almacenando cada nombre ingresado.
 
-Evento para el botón Adicionar:
+El botón Adicionar tiene un evento que:
 
-Obtener valor del campo de texto.
+Toma el valor del campo de texto.
 
-Verificar que no esté vacío (y opcionalmente que no esté repetido).
+Valida que el valor no sea vacío (y podría validar que no esté repetido).
 
-Si es válido, agregar al array y actualizar la lista visual en HTML.
+Si es válido, agrega el nombre al array nombres y actualiza la lista en el DOM para mostrar todos los nombres.
 
-Si no es válido, mostrar alerta o mensaje al usuario.
+Si no es válido, muestra una alerta.
 
-Evento para el botón Sortear Amigo:
+El botón Sortear Amigo tiene un evento que:
 
-Verificar que haya al menos uno o más nombres en el array.
+Verifica que haya al menos un nombre en el array.
 
-Usar función aleatoria para elegir un índice dentro del array:
+Usa la función Math.random() para seleccionar un índice al azar dentro del array.
+
+Muestra el nombre seleccionado como resultado del sorteo en la interfaz.
+
+Ejemplo de código para el sorteo:
 
 const indice = Math.floor(Math.random() * nombres.length);
 const amigoSeleccionado = nombres[indice];
-
-
-Mostrar amigoSeleccionado en pantalla.
+// Mostrar amigoSeleccionado en pantalla
 
 👥 Contribuyentes
 
-Oscar Aristides 
+Oscar Aristides – desarrollador principal y creador del proyecto.
 
 📄 Licencia
 
-Este proyecto está bajo la licencia MIT — puede usarse, modificarse y distribuirse libremente.
+Este proyecto está bajo la licencia MIT, lo que significa que puedes usarlo, modificarlo y distribuirlo libremente, siempre y cuando mantengas la atribución original.
